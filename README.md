@@ -18,24 +18,7 @@ A polished, responsive hotel booking landing page and booking form built with pl
 - [style.css](style.css) — all styles and animations
 - [script.js](script.js) — client-side logic: validation, pricing, booking flow
 
-## How to run
 
-1. Open the project folder in your file explorer.
-2. Double-click `index.html` to open it in your default browser, or serve it with a simple static server if you prefer:
-
-   - Using Python 3 (from project folder):
-
-     ```bash
-     python -m http.server 8000
-     ```
-
-     Then open http://localhost:8000 in your browser.
-
-   - Or using Node.js `http-server` (if installed):
-
-     ```bash
-     npx http-server -c-1
-     ```
 
 ## Customization
 
