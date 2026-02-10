@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Hotel Booking - Book Your Dream Stay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars"></div>
+  
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">🏨 LUXE HOTEL</div>
+      <div class="nav-items">
+        <span class="rating">⭐ 4.9/5 | 2,340+ Reviews</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Experience Luxury & Comfort</h1>
+        <p class="hero-subtitle">Book your stay at our award-winning 5-star hotel</p>
+        <div class="hero-badges">
+          <span class="badge">✓ Best Price Guarantee</span>
+          <span class="badge">✓ Free Cancellation</span>
+          <span class="badge">✓ 24/7 Support</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="content-wrapper">
+      <!-- Booking Form Section -->
+      <div class="booking-section">
+        <div class="form-wrapper">
+          <div class="form-header">
+            <h2>Find Your Perfect Room</h2>
+            <p class="form-subtitle">Easy 2-minute booking process</p>
+          </div>
+
+          <form class="booking-form" id="bookingForm">
+            <div class="form-grid">
+              <div class="input-group">
+                <label for="checkin">📅 Check-in</label>
+                <input type="date" id="checkin" required>
+                <span class="input-line"></span>
+              </div>
+
+              <div class="input-group">
+                <label for="checkout">📅 Check-out</label>
+                <input type="date" id="checkout" required>
+                <span class="input-line"></span>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="input-group">
+                <label for="guests">👥 Guests</label>
+                <select id="guests" required>
+                  <option value="">Select guests</option>
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5 Guests</option>
+                  <option value="6">6+ Guests</option>
+                </select>
+                <span class="input-line"></span>
+              </div>
+
+              <div class="input-group">
+                <label for="room">🛏️ Room Type</label>
+                <select id="room" required>
+                  <option value="">Select room</option>
+                  <option value="single" data-price="89">Single Room</option>
+                  <option value="double" data-price="149">Double Room</option>
+                  <option value="deluxe" data-price="199">Deluxe Suite</option>
+                  <option value="suite" data-price="299">Presidential Suite</option>
+                </select>
+                <span class="input-line"></span>
+              </div>
+            </div>
+
+            <div class="form-grid-full">
+              <div class="input-group">
+                <label for="name">👤 Full Name</label>
+                <input type="text" id="name" placeholder="e.g., John Smith" required>
+                <span class="input-line"></span>
+              </div>
+            </div>
+
+            <div class="form-grid-full">
+              <div class="input-group">
+                <label for="email"> Email Address</label>
+                <input type="email" id="email" placeholder="your.email@example.com" required>
+                <span class="input-line"></span>
+              </div>
+            </div>
+
+            <div class="form-grid-full">
+              <div class="input-group">
+                <label for="requests"> Special Requests</label>
+                <textarea id="requests" placeholder="Late check-in, high floor, anniversary celebration, etc."></textarea>
+                <span class="input-line"></span>
+              </div>
+            </div>
+
+            <!-- Price Breakdown -->
+            <div class="price-breakdown">
+              <div class="price-row">
+                <span>Room Rate:</span>
+                <span id="roomPrice">$0</span>
+              </div>
+              <div class="price-row">
+                <span>Number of Nights:</span>
+                <span id="nights">0</span>
+              </div>
+              <div class="price-row total">
+                <span>Total Amount:</span>
+                <span id="totalPrice">$0</span>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span class="btn-text">Reserve Now</span>
+              <span class="btn-loader"></span>
+            </button>
+
+            <div id="message" class="message"></div>
+            <p class="terms">By booking, you agree to our terms & conditions</p>
+          </form>
+        </div>
+
+        <!-- Right Side - Amenities & Benefits -->
+        <div class="amenities-section">
+          <h3>Why Choose Us?</h3>
+          <div class="amenities-grid">
+            <div class="amenity-card">
+              <span class="amenity-icon">🌟</span>
+              <h4>Premium Service</h4>
+              <p>Award-winning customer service</p>
+            </div>
+            <div class="amenity-card">
+              <span class="amenity-icon">🏊</span>
+              <h4>Facilities</h4>
+              <p>Pool, Spa & Fitness Center</p>
+            </div>
+            <div class="amenity-card">
+              <span class="amenity-icon">🍽️</span>
+              <h4>Dining</h4>
+              <p>Fine dining restaurants</p>
+            </div>
+            <div class="amenity-card">
+              <span class="amenity-icon">📶</span>
+              <h4>WiFi</h4>
+              <p>Free high-speed internet</p>
+            </div>
+          </div>
+
+          <h3 style="margin-top: 30px;">Room Types</h3>
+          <div class="room-types">
+            <div class="room-type-item">
+              <span class="room-icon">🛏️</span>
+              <div>
+                <h5>Single Room</h5>
+                <p>Perfect for solo travelers</p>
+              </div>
+              <span class="price-tag">$89/night</span>
+            </div>
+            <div class="room-type-item">
+              <span class="room-icon">🛏️🛏️</span>
+              <div>
+                <h5>Double Room</h5>
+                <p>Ideal for couples</p>
+              </div>
+              <span class="price-tag">$149/night</span>
+            </div>
+            <div class="room-type-item">
+              <span class="room-icon">👑</span>
+              <div>
+                <h5>Deluxe Suite</h5>
+                <p>Spacious & luxurious</p>
+              </div>
+              <span class="price-tag">$199/night</span>
+            </div>
+            <div class="room-type-item">
+              <span class="room-icon">👑👑</span>
+              <div>
+                <h5>Presidential Suite</h5>
+                <p>Ultimate luxury experience</p>
+              </div>
+              <span class="price-tag">$299/night</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials">
+        <h2>What Our Guests Say</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Best hotel experience ever! The staff was incredibly friendly and the rooms were immaculate."</p>
+            <p class="reviewer-name">— Vihaan Malhotra</p>
+            <p class="review-date">Stayed in February 2026</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"The location, service, and facilities are outstanding. Will definitely come back!"</p>
+            <p class="reviewer-name">— Youvraj Singh</p>
+            <p class="review-date">Stayed in January 2026</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Excellent value for money. Every detail was perfect. Highly recommended!"</p>
+            <p class="reviewer-name">— Raja Ram</p>
+            <p class="review-date">Stayed in December 2025</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust & Security Section -->
+      <section class="trust-section">
+        <h2>Booking with Confidence</h2>
+        <div class="trust-grid">
+          <div class="trust-card">
+            <span class="trust-icon">🔒</span>
+            <h4>Secure Payment</h4>
+            <p>256-bit SSL encryption for your safety</p>
+          </div>
+          <div class="trust-card">
+            <span class="trust-icon">💳</span>
+            <h4>Payment Flexibility</h4>
+            <p>Pay later option available</p>
+          </div>
+          <div class="trust-card">
+            <span class="trust-icon">❌</span>
+            <h4>Free Cancellation</h4>
+            <p>Cancel up to 48 hours before arrival</p>
+          </div>
+          <div class="trust-card">
+            <span class="trust-icon">☎️</span>
+            <h4>24/7 Support</h4>
+            <p>Always here to help you</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 LUXE HOTEL - All Rights Reserved | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
